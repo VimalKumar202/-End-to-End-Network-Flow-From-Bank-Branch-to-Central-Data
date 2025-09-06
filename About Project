@@ -1,0 +1,47 @@
+🔵 Left Side: Central Data Center
+✅ Servers
+10.0.0.1 → Server 2
+10.0.0.2 → Server 1
+ These store core applications and banking data.
+✅ Network Load Balancer
+Balances traffic between the two servers for performance and reliability.
+✅ Firewalls
+There are two layers of firewalls to secure traffic:
+Between the load balancer and switch
+Before the internet/cloud interface
+✅ Switch
+Connects internal systems to firewalls and the router.
+✅ Router
+Sends traffic to the outside world via:
+MPLS (secure private link)
+Cloud (platform services)
+Internet (public connection, less secure)
+
+🌐 Middle: Communication Channels
+
+🔁 MPLS (Multiprotocol Label Switching)
+Secure, fast, and private link between the central data and the bank branch.
+
+☁️ Cloud
+Cloud services may host certain platforms, backup, or security tools.
+Accessible by both Central Data and Bank Branch.
+
+🌍 Internet
+Public path — might be used for non-sensitive services, backups, or internet access.
+
+🏦 Right Side: Bank Branch
+✅ Router
+Receives connections from MPLS, cloud, or internet.
+Routes traffic inside the branch.
+✅ Firewall
+Protects the branch network from malicious traffic.
+✅ Switch
+Connects multiple computers (LAN devices) within the bank branch.
+✅ Computers
+These represent user workstations (e.g., tellers, customer service, managers).
+
+🔐 Security Focused Features
+Dual firewall setup at the Central Data
+Use of MPLS for secure data flow
+Cloud and Internet connections separated and filtered
+Load balancing for high availability
